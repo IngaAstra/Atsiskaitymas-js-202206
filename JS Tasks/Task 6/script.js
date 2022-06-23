@@ -7,6 +7,7 @@ atveju grąžins visų "users" amžiaus vidurkį kaip skaičių.
 2. funkcija "getUsersNames" -  kaip argumentą priims masyvą ir duoto masyvo 
 atveju grąžins visų "users" vardus naujame masyve pvz., ['John Smith', 'Ann Smith'..].
 -------------------------------------------------------------------------- */
+'use strict'
 
 const users = [
   { id: '1', name: 'John Smith', age: 20 },
@@ -19,3 +20,18 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
+
+// 1 amziaus vidurkis
+let getUserAverageAge = masyvas => {
+  let reducer = (total, currentValue) => total + currentValue;
+  let sum = masyvas.reduce(reducer)
+  return (sum / masyvas.length).toFixed(0);
+ }
+ let ages = users.map(person => person.age);
+ console.log(getUserAverageAge(ages));
+// veikia
+
+// 2 naujas masyvas
+
+// const newUsers = [users.name];
+// console.log('new array: ', newUsers)

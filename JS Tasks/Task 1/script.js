@@ -8,3 +8,17 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+'use strict'
+
+const kilogramai = parseInt(document.getElementById('search').value);
+console.log(kilogramai)
+// const svaraiKoef = search * 2.2046
+// console.log(svaraiKoef)
+
+// function convertWeight(search){
+//     document.getElementById('output').innerHTML = search + 'kg = ' + svaraiKoef.toFixed(3) + 'lb.'
+// }
+function convertWeight(search) {
+    document.getElementById("output").innerHTML=search/2.2046;
+
+}

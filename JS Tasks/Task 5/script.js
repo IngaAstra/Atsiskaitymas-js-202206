@@ -19,3 +19,24 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30, hasDog: false },
   { id: '9', name: 'Daniel Cane', age: 51, hasDog: true },
 ];
+
+
+// // 1. Dogs neveikia
+// function filterDogOwers(users, hasDog) {
+//   return users.filter(person => person.hasDog = true);
+//   }
+  
+
+// console.log(filterDogOwers(users, hasDog));
+
+const filterDogOwers =  users.filter(person => person.hasDog = true);
+console.log(filterDogOwers)
+// 2. Age
+
+//function filterAdults(users,age) {
+  const filterAdults = users.filter(users => users.age > 18);
+ //// return result
+//};
+console.log(filterAdults)
+
+// vel su tom funkcijom neaisku, rezultatas gaunas (56)!!!!

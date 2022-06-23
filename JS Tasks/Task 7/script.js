@@ -11,10 +11,17 @@ const audi = {
   color: 'white',
 };
 
-const showObjectKeys = Object.keys(audi);
-console.log(showObjectKeys);
+// 1 variantas
+const showObjectKeys1 = Object.keys(audi);
+console.log(showObjectKeys1);
 
-// console.log(Object.keys(audi));
+// 2 variantas
+console.log(Object.keys(audi));
 
-// gavau key masyve, bet nesuprantu užduotie kai su ta finkcija
+// 3 variantas su funkcija
+function showObjectKeys(object) {
+  return Object.keys(object)
+}
+console.log(showObjectKeys(audi));
 
+//veikia

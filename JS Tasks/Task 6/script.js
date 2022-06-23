@@ -31,7 +31,32 @@ let getUserAverageAge = masyvas => {
  console.log(getUserAverageAge(ages));
 // veikia
 
+// 1 antas dar galimas variantas
+
+const getAverageAge = (arr = []) => {
+  const {sum, count} = arr.reduce((acc, val) => {
+    let {sum, count} = acc;
+    sum += val.age;
+    count++;
+    return {sum, count};
+  }, {
+    sum: 0, count: 0
+  });
+  return (sum / (count || 1)).toFixed(0);
+};
+console.log(getAverageAge(users));
+
 // 2 naujas masyvas
 
-// const newUsers = [users.name];
-// console.log('new array: ', newUsers)
+function getUsersNames(users) {
+  const usersNames = []; //tuscias masyvas
+  for (i = 0; i < users.length; i++)
+  {
+    usersNames.push(users[i].name); // sudedam name
+  }
+console.log(usersNames);
+}
+getUsersNames(users);
+
+// kazkas ne taip su 53 eilute !!!!!
+

@@ -9,16 +9,18 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
 'use strict'
+// // hidden isvedima
 
-const kilogramai = parseInt(document.getElementById('search').value);
-console.log(kilogramai)
-// const svaraiKoef = search * 2.2046
-// console.log(svaraiKoef)
+document.getElementById('output').style.visibility = 'hidden';
 
-// function convertWeight(search){
-//     document.getElementById('output').innerHTML = search + 'kg = ' + svaraiKoef.toFixed(3) + 'lb.'
-// }
-function convertWeight(search) {
-    document.getElementById("output").innerHTML=search/2.2046;
+// Įvedus skaičių konvertuoja ir parodo html'e
+document.getElementById('submit-btn').addEventListener('click', function(event){
+    event.preventDefault();
+    document.getElementById('output').style.visibility = 'visible';
+    let kg = document.getElementById('search').value;
+    document.getElementById('lbOutput').innerHTML = (kg*2.2046).toFixed(3);
+    document.getElementById('gramsOutput').innerHTML = kg/0.0010000;
+    document.getElementById('ozOutput').innerHTML = (kg*35.274).toFixed(3);
+})
 
-}
+// oki

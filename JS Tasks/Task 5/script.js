@@ -20,23 +20,14 @@ const users = [
   { id: '9', name: 'Daniel Cane', age: 51, hasDog: true },
 ];
 
+// 1 užduotis
 
-// // 1. Dogs neveikia
-// function filterDogOwers(users, hasDog) {
-//   return users.filter(person => person.hasDog = true);
-//   }
-  
+const filterDogOwers =  users.filter(users => users.hasDog === true);
+console.log(filterDogOwers);
 
-// console.log(filterDogOwers(users, hasDog));
+// 2. užduotis
 
-const filterDogOwers =  users.filter(person => person.hasDog = true);
-console.log(filterDogOwers)
-// 2. Age
-
-//function filterAdults(users,age) {
-  const filterAdults = users.filter(users => users.age > 18);
- //// return result
-//};
+const filterAdults = users.filter(users => users.age > 18);
 console.log(filterAdults)
 
-// vel su tom funkcijom neaisku, rezultatas gaunas (56)!!!!
+// veikia.. funkcija ?!?

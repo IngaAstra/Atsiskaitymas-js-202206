@@ -18,12 +18,38 @@
         <h1 class="headline">Weight Converter</h1>
         <!-- Users input -->
         <form>
-          <!--text pakeista i number-->
-          <input type="text" id="search" placeholder="Enter kilograms..." />
+          <!--text pakeista i number ir papildyta-->
+          <input type="number" id="search" placeholder="Enter kilograms..." autocomplete="off" />
           <input type="submit" id="submit-btn" value="Calculate" />
         </form>
         <!-- Place for output after form submission -->
-        <div id="output"></div>
+        <!--papildyta rezultato isvedimui-->
+        <div class="cards-container">
+        <div id="output">
+
+        <div class="card">
+          <div class="card-block"> 
+            <h3>Pounds:</h3>
+            <div id="lbOutput"></div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-block">
+            <h3>Grams:</h3>
+            <div id="gramsOutput"></div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card-block">
+            <h3>Ounces:</h3>
+            <div id="ozOutput"></div>
+          </div>
+        </div>
+
+        </div>
+        </div>
       </div>
     </main>
 

@@ -10,5 +10,40 @@ Paspaudus mygtuką "Show users":
 Pastaba: Sukurta kortelė, kurioje yra pateikiama vartotojo informacija, turi 
 turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
-
+'use strict'
 const ENDPOINT = 'https://api.github.com/users';
+
+const output = document.getElementById('output');
+output.innerHTML = `
+<table id="usersTable" style="display: none;" width="100%" border="1px solid black">
+        <thead>
+            <tr>
+                <th id="header-style" width="15%">id</th>
+                <th id="header-style" width="35%">login</th>
+                <th id="header-style" width="50%">avatar</th>
+            </tr>
+        </thead>
+    <tbody dataPlace></tbody>
+</table>
+`
+
+// paima info
+function myData() {
+    return fetch('https://api.github.com/users')
+    .then(response => response.json())
+};
+console.log(myData());
+
+// lentele
+
+function createTable(data) {
+    const dataPlace = document.querySelector('[dataPlace]');
+    dataPlace.innerHTML = '';
+}
+
+
+
+myData().then(data => {
+    createTable(data)
+});
+//.catch(event => console.log(event))

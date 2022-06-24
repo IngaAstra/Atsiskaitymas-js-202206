@@ -50,7 +50,7 @@
 
 .output-cointainer h1 {
   color: black;
-  background: aqua;
+  background: violet;
   border: 3px solid white;
   padding: 20px;
 }
@@ -71,13 +71,13 @@
 #usersTable {
   padding: 0;
   background: #222;
-  color: black;
+  color:white;
   border: 1px white;
 }
 #header-style {
   font-size: 30px;
   padding: 20px;
-  background:aqua;
+  background:violet;
 }
 
 tbody {

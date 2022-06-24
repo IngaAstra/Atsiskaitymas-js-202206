@@ -13,8 +13,10 @@ turėti bent minimalų stilių ir būti responsive;
 'use strict'
 const ENDPOINT = 'https://api.github.com/users';
 
+// document.getElementById('output-container').style.visibility = 'visible';
 const output = document.getElementById('output');
-output.innerHTML = `
+output.innerHTML = 
+`
 <table id="usersTable" style="display: none;" width="100%" border="1px solid black">
         <thead>
             <tr>
@@ -23,27 +25,43 @@ output.innerHTML = `
                 <th id="header-style" width="50%">avatar</th>
             </tr>
         </thead>
-    <tbody dataPlace></tbody>
-</table>
+        <tbody dataPlace></tbody>
+    </table>
 `
 
-// paima info
-function myData() {
+// ifo ir API
+function myData(){
     return fetch('https://api.github.com/users')
-    .then(response => response.json())
-};
-console.log(myData());
-
-// lentele
-
-function createTable(data) {
-    const dataPlace = document.querySelector('[dataPlace]');
-    dataPlace.innerHTML = '';
+    .then(response => response.json());
 }
-
-
-
+// atspausdina visa data is data place
 myData().then(data => {
     createTable(data)
-});
-//.catch(event => console.log(event))
+})
+.catch(event => console.log(event))
+
+function createTable(data){
+    // suranda data place
+    var dataPlace = document.querySelector("[dataPlace]");
+    // 
+    dataPlace.innerHTML = "";
+
+    // appendina data i dataplace
+    data.map(x => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = 
+        `
+        <th width="15%">${x.id}</th>
+        <th width="35%">${x.login}</th>
+        <th width="50%"><img src="${x.avatar_url}" width="150"></th>
+        `
+        dataPlace.append(tr);
+    })
+}
+
+// mygtukas 
+document.getElementById("btn").addEventListener("click", function(){
+    document.getElementById("usersTable").style.display = "";
+    document.getElementById("btn").style.display = "none";
+    document.getElementById("message").style.display = "none";
+})

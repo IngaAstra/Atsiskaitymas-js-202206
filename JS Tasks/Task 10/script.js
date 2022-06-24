@@ -1,6 +1,16 @@
 /* ------------------------------ TASK 10 ---------------------------------------------------
 Sutvarkykite užduoties "Task 10" esančius failus taip, kad veiktų žemiau pateiktos funkcijos.
 -------------------------------------------------------------------------------------------- */
+'use strict'
+
+import {one, two, three, four, five} from "./modules/numbers/numbers.js";
+import {composition} from "./modules/math/composition.js";
+//import composition from "./modules/math/composition.js";
+import {division} from "./modules/math/division.js";
+import {multiplication} from "./modules/math/multiplication.js";
+import {substraction} from "./modules/math/substraction.js";
+// Cannot use import statement outside a module
+// ir nesuprantu kodel ????
 
 let a = composition(one, four);
 let b = division(four, two);

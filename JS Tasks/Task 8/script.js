@@ -34,3 +34,4 @@ function Calculator() {
   console.log( "Dalinta: " + calculator.div() );
 
   // veikia **11
+  

@@ -33,7 +33,7 @@ output.innerHTML =
 function myData(){
     return fetch('https://api.github.com/users')
     .then(response => response.json());
-}
+};
 // atspausdina visa data is data place
 myData().then(data => {
     createTable(data)
@@ -57,11 +57,11 @@ function createTable(data){
         `
         dataPlace.append(tr);
     })
-}
+};
 
 // mygtukas 
 document.getElementById("btn").addEventListener("click", function(){
     document.getElementById("usersTable").style.display = "";
     document.getElementById("btn").style.display = "none";
     document.getElementById("message").style.display = "none";
-})
+});

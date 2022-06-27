@@ -9,7 +9,7 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
 'use strict'
-// // hidden isvedima
+// hidden isvedimas
 
 document.getElementById('output').style.visibility = 'hidden';
 

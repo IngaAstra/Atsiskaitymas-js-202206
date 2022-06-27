@@ -24,4 +24,4 @@ function showObjectKeys(object) {
 }
 console.log(showObjectKeys(audi));
 
-//veikia
+//veikia visi

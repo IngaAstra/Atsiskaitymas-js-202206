@@ -30,4 +30,4 @@ console.log(filterDogOwers);
 const filterAdults = users.filter(users => users.age > 18);
 console.log(filterAdults)
 
-// veikia.. funkcija ?!?
+// veikia.. 

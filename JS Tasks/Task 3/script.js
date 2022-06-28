@@ -15,6 +15,8 @@ const ENDPOINT = 'https://api.github.com/users';
 
 // document.getElementById('output-container').style.visibility = 'visible';
 const output = document.getElementById('output');
+
+//priskyrus reikšmė innerHTML kodo inicijavimo metu, dingsta tekstas 'Press "Show Users" button to see users'. Toks priskyrimas turėtų būti tik po mygtuko paspaudimo
 output.innerHTML = 
 `
 <table id="usersTable" style="display: none;" width="100%" border="1px solid black">
@@ -42,13 +44,13 @@ myData().then(data => {
 
 function createTable(data){
     // suranda data place
-    var dataPlace = document.querySelector("[dataPlace]");
+    var dataPlace = document.querySelector("[dataPlace]");  //var nėra naudojami es6. Taip pat, pasirinkus naudoti viengubas ar dvigubas kabutes, pasirinkimas turi galioti visam failui.
     // 
     dataPlace.innerHTML = "";
 
     // appendina data i dataplace
     data.map(x => {
-        const tr = document.createElement("tr");
+        const tr = document.createElement("tr"); 
         tr.innerHTML = 
         `
         <th width="15%">${x.id}</th>

@@ -27,7 +27,10 @@ console.log(filterDogOwers);
 
 // 2. užduotis
 
-const filterAdults = users.filter(users => users.age > 18);
+const filterAdults = users.filter(users => users.age > 18); //pilnametis jau yra ir 18os metų asmuo, tai turėtų būti >=
 console.log(filterAdults)
 
 // veikia.. 
+
+//užduočiai atlikti reikėjo parašyti funkcijas. Jūsų atveju tai tik du kintamieji išvesti per console. 
+//buvo tikimasi function getDogOwners(users) {return (jūsų filtras)} ar panašiai

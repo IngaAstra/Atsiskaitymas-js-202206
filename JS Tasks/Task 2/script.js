@@ -11,6 +11,6 @@ const countNumber = document.getElementById('btn__state');
 countButton.addEventListener('click', countUp);
 
 function countUp() {
-    countNumber.innerHTML++;
+    countNumber.innerHTML++;  //čia tikslingiau būtų turėti kintamąjį clicks kuris skaičiuotų paspaudimus ir tik po to jis būtų priskiriamas innerHTML. Iš savęs innerHTML yra Element propertis, kuris tikisi HTML turinio
 }
 // veikia :)

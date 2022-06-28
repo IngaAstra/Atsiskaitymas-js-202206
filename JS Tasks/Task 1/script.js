@@ -17,9 +17,9 @@ document.getElementById('output').style.visibility = 'hidden';
 document.getElementById('submit-btn').addEventListener('click', function(event){
     event.preventDefault();
     document.getElementById('output').style.visibility = 'visible';
-    let kg = document.getElementById('search').value;
+    let kg = document.getElementById('search').value; //galima buvo naudoti const
     document.getElementById('lbOutput').innerHTML = (kg*2.2046).toFixed(3);
-    document.getElementById('gramsOutput').innerHTML = kg/0.0010000;
+    document.getElementById('gramsOutput').innerHTML = kg/0.0010000; //jeigu jau kitur buvo naudojama toFixed, tai tikslinga būtų uždėti ir čia, nes kg gali būti ir 1,235485798984654 ir pan
     document.getElementById('ozOutput').innerHTML = (kg*35.274).toFixed(3);
 })
 

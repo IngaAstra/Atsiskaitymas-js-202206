@@ -36,6 +36,8 @@ let getUserAverageAge = masyvas => {
 
 function getUserNames(users) {
   const userNames = [];  // tuscias masyvas
+
+  //su map būtų buvę gražiau
   for (let a = 0; a < users.length; a++) {
       userNames.push(users[a].name);  // sudedam name
     }
@@ -44,3 +46,5 @@ console.log(userNames);
 getUserNames(users); 
 
 // veikia
+
+//visais atvejais buvo galima vietoj let naudoti const.
